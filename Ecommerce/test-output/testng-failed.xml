@@ -5,7 +5,6 @@
     <classes>
       <class name="Assignment.Assign">
         <methods>
-          <include name="AfterTestExecute"/>
           <include name="practiceEcommerceTest"/>
           <include name="BT"/>
         </methods>

@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20538" started-at="2022-07-12T15:22:03 IST" finished-at="2022-07-12T15:22:23 IST">
+  <suite name="Default suite" duration-ms="27763" started-at="2022-07-13T10:54:39 IST" finished-at="2022-07-13T10:55:07 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20538" started-at="2022-07-12T15:22:03 IST" finished-at="2022-07-12T15:22:23 IST">
+    <test name="Default test" duration-ms="27763" started-at="2022-07-13T10:54:39 IST" finished-at="2022-07-13T10:55:07 IST">
       <class name="Assignment.Assign">
-        <test-method status="PASS" signature="BT()[pri:0, instance:Assignment.Assign@462d5aee]" name="BT" is-config="true" duration-ms="8171" started-at="2022-07-12T15:22:03 IST" finished-at="2022-07-12T15:22:11 IST">
+        <test-method status="PASS" signature="BT()[pri:0, instance:Assignment.Assign@462d5aee]" name="BT" is-config="true" duration-ms="14371" started-at="2022-07-13T10:54:39 IST" finished-at="2022-07-13T10:54:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BT -->
-        <test-method status="PASS" signature="practiceEcommerceTest()[pri:0, instance:Assignment.Assign@462d5aee]" name="practiceEcommerceTest" duration-ms="11507" started-at="2022-07-12T15:22:11 IST" finished-at="2022-07-12T15:22:22 IST">
+        <test-method status="PASS" signature="practiceEcommerceTest()[pri:0, instance:Assignment.Assign@462d5aee]" name="practiceEcommerceTest" duration-ms="12908" started-at="2022-07-13T10:54:53 IST" finished-at="2022-07-13T10:55:06 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- practiceEcommerceTest -->
-        <test-method status="PASS" signature="AfterTestExecute()[pri:0, instance:Assignment.Assign@462d5aee]" name="AfterTestExecute" is-config="true" duration-ms="809" started-at="2022-07-12T15:22:22 IST" finished-at="2022-07-12T15:22:23 IST">
+        <test-method status="PASS" signature="AfterTestExecute()[pri:0, instance:Assignment.Assign@462d5aee]" name="AfterTestExecute" is-config="true" duration-ms="453" started-at="2022-07-13T10:55:06 IST" finished-at="2022-07-13T10:55:07 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterTestExecute -->

@@ -31,7 +31,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class Assign {
 
 	WebDriver driver;
+	//Soft Assertion added
 	SoftAssert SoftAssert=new SoftAssert();
+	//Reports Creation started
 	ExtentReports extents;
 	ExtentSparkReporter spark;
 	ExtentTest test1;
@@ -44,31 +46,39 @@ public class Assign {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
 		 extents=new ExtentReports();
-		 spark=new ExtentSparkReporter("extentReport.html");
+		 //Reports will be saved in the name extendReports.html
+		 spark=new ExtentSparkReporter("extentReports.html");
+		 //attached report
 		 extents.attachReporter(spark);
 	}
 
 	@Test
 	public void practiceEcommerceTest() throws InterruptedException
 	{
+		//Added some configuration to Reports Like Report theme,Report name and title.
 		spark.config().setTheme(Theme.DARK);
 		spark.config().setDocumentTitle("Ecommerce Report");
 		spark.config().setReportName("Extent Automation report");
 		
+		//Created a test and add all logs in the given test
 		
 		 test1=extents.createTest("Ecommerce_Test");
 		test1.pass("Land to Login Page");
 
 		String title="Login - My Store";
+		//Assertion to check title of the page.
 		SoftAssert.assertEquals(driver.getTitle(), title);
 		test1.pass("Title of page is captured");
-		WebElement e=driver.findElement(By.id("email"));
+		WebElement email_id=driver.findElement(By.id("email"));
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView()", e);
+		js.executeScript("arguments[0].scrollIntoView()", email_id);
 		js.executeScript("document.getElementById('email').value='asthajain80@gmail.com'");
+		SoftAssert.assertTrue(email_id.isDisplayed());
 		test1.info("user has entered username");
+		WebElement password=driver.findElement(By.id("passwd"));
 		js.executeScript("document.getElementById('passwd').value='asthajain13'");
 		test1.info("user has entered password");
+		SoftAssert.assertTrue(password.isDisplayed());
 		SoftAssert.assertTrue(driver.findElement(By.id("SubmitLogin")).isEnabled());
 		js.executeScript("document.getElementById('SubmitLogin').click()");
 		test1.pass("Login Successfully");
@@ -97,12 +107,13 @@ public class Assign {
 	@AfterTest
 	public void AfterTestExecute()
 	{
-		
+		//to check all assertion its mandatory to add assertAll
 		SoftAssert.assertAll();
 		driver.close();
 		test1.pass("browser get closed");
+		//to erase previous data and generate new report
 		extents.flush();
-	}
 	
+	}
 }
 
